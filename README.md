@@ -11,6 +11,6 @@
 # 🖥️ Resultado
 
 <div align="center">
-  <img alt="Sticky Navbar" src="https://imgur.com/qt7BDXq" width="450px">
+  <img alt="Sticky Navbar" src="https://i.imgur.com/qt7BDXq.png" width="450px">
   <p>Confira o resultado: <a href="https://sticky-navbar-ruuuff.netlify.app">sticky-navbar-ruuuff</a></p>
 </div>
