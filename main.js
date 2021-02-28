@@ -1,4 +1,6 @@
 const nav = document.querySelector('.nav')
+const navButtons = document.querySelector('.nav ul')
+
 window.addEventListener('scroll', navChange)
 
 function navChange() {
@@ -6,6 +8,16 @@ function navChange() {
     nav.classList.add('active')
   } else {
     nav.classList.remove('active')
+  }
+}
+
+function toggleNav(el) {
+  navButtons.classList.toggle('appear')
+
+  if (navButtons.classList.contains('appear')) {
+    el.className = 'nav-toggle fas fa-times'
+  } else {
+    el.className = 'nav-toggle fas fa-bars'
   }
 }
 
