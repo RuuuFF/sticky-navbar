@@ -34,13 +34,19 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-toggle {
+/* nav in mobile */
+.nav #toggle-nav {
   display: none;
-  position: fixed;
-  padding: 0.62rem;
+  padding: 0.3rem 0.93rem;
+}
+
+.nav #toggle-nav i {
   color: #fff;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+  font-size: 20px;
+}
+
+.nav.active #toggle-nav i {
+  color: #000;
 }
 
 .nav ul {
@@ -48,12 +54,6 @@ body {
   align-items: center;
   justify-content: center;
   list-style-type: none;
-}
-
-.nav ul h3 {
-  display: none;
-  color: #fff;
-  padding: 1.6rem 0;
 }
 
 .nav ul a {
@@ -134,52 +134,40 @@ body {
   letter-spacing: 1.1px;
 }
 
-@media (max-width: 600px) {
-  :root {
-    font-size: 93.75%;
-  }
-
-  .nav.active ul {
-    background-color: #fff;
-  }
-
-  .nav-toggle {
+@media (max-width: 580px) {
+  .nav #toggle-nav {
     display: block;
+    margin-left: auto;
   }
 
-  .nav ul {
-    background-color: #222;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  #nav-buttons {
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
-    width: min(70%, 150px);
-    flex-direction: column;
-    justify-content: flex-start;
+    width: 30vw;
+    margin-top: 5.06rem;
+    background-color: #222;
     transform: translateX(101%);
     transition: all 0.3s ease-in-out;
-    z-index: -2;
   }
 
-  .nav ul.appear {
+  #nav-buttons.show {
     transform: translateX(0);
   }
 
-  .nav ul h3 {
-    display: block;
+  .nav.active #nav-buttons {
+    margin-top: 3.31rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .nav ul li {
-    margin-bottom: 0.5rem;
+  #nav-buttons ul {
+    justify-content: flex-start;
+    flex-direction: column;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-    margin: -1.5rem 0 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1.15rem;
+  #nav-buttons ul li {
+    margin-bottom: 1rem;
   }
 }
